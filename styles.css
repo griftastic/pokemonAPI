@@ -10,11 +10,7 @@ body {
     /* flex-direction: row; */
 }
 
-.cardContainer {
-    /* position: relative; */
-    /* top: 25%; */
 
-}
 
 .contentCard:hover {
     transform: scale(1.05);
