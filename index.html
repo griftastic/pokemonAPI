@@ -12,27 +12,41 @@
 </head>
 <body>
 
-    <div class = "cardContainer">
-        <section class = "contentCard 1">
-            <h1 class= "content pokemonName1"></h1>
-            <h2></h2>
-            <img class = "content image1"><img>
-        </section>
+    <div class= "appContainer">
+        <div class = "cardContainer">
+            <div class= "dropZone empty">
+                <section draggable = "true" class = "cardOne contentCard fill">
+                    <h1 class= "content pokemonName1"></h1>
+                    <h2></h2>
+                    <img draggable = "false" class = "content image1"><img>
+                </section>
+            </div>
+
+            <div class= "dropZone empty">
+                <section draggable = "true" class= "cardTwo contentCard fill" >
+                    <h1 class= "content pokemonName2"></h1>
+                    <h2></h2>
+                    <img draggable = "false" class = "content image2"><img>
+                </section>
+            </div>
+            
+            <div class= "dropZone empty">
+                <section draggable = "true" class = "cardThree contentCard fill">
+                    <h1 class= "content pokemonName3"></h1>
+                    <h2></h2>
+                    <img draggable = "false" class = "content image3"><img>
+                </section>
+            </div>
+        </div>
         
-        <section class= "contentCard 2">
-            <h1 class= "content pokemonName2"></h1>
-            <h2></h2>
-            <img class = "content image2"><img>
-        </section>
-        
-        <section class = "contentCard 3">
-            <h1 class= "content pokemonName3"></h1>
-            <h2></h2>
-            <img class = "content image3"><img>
-        </section>
+        <div class = "dropContainer">
+            <section class= "dropZone empty"></section>
+            <section class= "dropZone empty"></section>
+            <section class= "dropZone empty"></section>
+        </div>
     </div>
-
-
-    <script src="./fetch.js"></script>
+        
+        
+        <script src="./fetch.js"></script>
 </body>
 </html>
