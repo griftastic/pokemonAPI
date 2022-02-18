@@ -33,7 +33,7 @@ body {
    
    /* Cards */
 
-   .dropZone {
+   .empty {
       height: 15em;
       width: 15em;
       display: inline-block;
