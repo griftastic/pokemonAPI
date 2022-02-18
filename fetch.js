@@ -3,9 +3,6 @@
 const baseURL = "https://pokeapi.co";
 
 
-//let selectedCard = selected card
-//see how it is referencing the item being dragged and allow it to be set to card 2 or 3
-
 //RNG
 
 function getRandomInt(max) {
@@ -33,6 +30,46 @@ function fetchPokemon() {
 fetchPokemon()
 
 //Drag and Drop
+
+const list_items = document.querySelectorAll('.list-item');
+const lists = document.querySelectorAll('.list');
+
+let draggedItem = null;
+
+for(let i = 0; i < list_items.length; i++){
+    const item = list_items[i]
+    
+    item.addEventListener('dragstart', function() {
+        draggedItem = item;
+        setTimeout(function () {
+            item.style.display = 'none';
+        }, 0)
+        });
+
+    item.addEventListener('dragend', function() {
+        setTimeout(function() {
+            draggedItem = draggedItem.style.display = 'block';
+            draggedItem = null;
+        }, 0);
+        })
+        
+        for(let j = 0; j < lists.length; j++) {
+            const list = lists[j];
+
+            list.addEventListener('dragover', function(e) {
+                e.preventDefault();
+            });
+            list.addEventListener('dragenter', function(e) {
+                e.preventDefault();
+            });
+
+            list.addEventListener('drop', function(e) {
+                this.append(draggedItem);
+            });
+        }
+    }
+
+//Commented Out Old Drag and Drop code
 
 // const fill = document.querySelector('.fill');     
 // const fill2 = document.querySelector('.cardTwo'); 
@@ -92,42 +129,5 @@ fetchPokemon()
 //     console.log('drop');
 // }
             
-const list_items = document.querySelectorAll('.list-item');
-const lists = document.querySelectorAll('.list');
-
-let draggedItem = null;
-
-for(let i = 0; i < list_items.length; i++){
-    const item = list_items[i]
-    
-    item.addEventListener('dragstart', function() {
-        draggedItem = item;
-        setTimeout(function () {
-            item.style.display = 'none';
-        }, 0)
-        });
-
-    item.addEventListener('dragend', function() {
-        setTimeout(function() {
-            draggedItem = draggedItem.style.display = 'block';
-            draggedItem = null;
-        }, 0);
-        })
-        
-        for(let j = 0; j < lists.length; j++) {
-            const list = lists[j];
-
-            list.addEventListener('dragover', function(e) {
-                e.preventDefault();
-            });
-            list.addEventListener('dragenter', function(e) {
-                e.preventDefault();
-            });
-
-            list.addEventListener('drop', function(e) {
-                this.append(draggedItem);
-            });
-        }
-    }
         
 

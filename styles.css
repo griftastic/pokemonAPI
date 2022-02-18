@@ -17,6 +17,7 @@ body {
 
  .cardContainer {
     display: flex;
+    margin-right: .65rem;
     flex-wrap: nowrap;
     justify-content: center;
     gap: 1.5em;
