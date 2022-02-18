@@ -11,15 +11,15 @@ body {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem
+    align-items: flex-end;
+    gap: 1.5em
 }
 
  .cardContainer {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5em;
     flex-direction: row;
  }
  
@@ -27,8 +27,18 @@ body {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5em;
     flex-direction: row;
+   }
+
+   .fillSpace {
+      width: 15em;
+      height: 15em;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 2rem;
+      flex-direction: row;
    }
    
    /* Cards */
@@ -37,17 +47,17 @@ body {
       height: 15em;
       width: 15em;
       display: inline-block;
-      position: relative;
+      /* position: relative;
       top: 5px;
-      left: 5px;
-      background-color: grey;
-      border: solid 2px black;
+      left: 5px; */
+      border: solid 2px #B8D8AA;
       border-radius: 2rem;
+      background-color: grey;
    }
    
    .contentCard {
-      width: 15rem;
-      height: 15rem;
+      width: 15em;
+      height: 15em;
       background-color: #CBC3E3;
       border: solid 2px black;
       border-radius: 2rem;

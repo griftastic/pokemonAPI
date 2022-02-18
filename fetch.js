@@ -34,64 +34,100 @@ fetchPokemon()
 
 //Drag and Drop
 
-const fill = document.querySelector('.fill');     
-const fill2 = document.querySelector('.cardTwo'); 
-const fill3 = document.querySelector('.cardThree'); 
-const empties = document.querySelectorAll('.empty');
-let selectedCard = "";
+// const fill = document.querySelector('.fill');     
+// const fill2 = document.querySelector('.cardTwo'); 
+// const fill3 = document.querySelector('.cardThree'); 
+// const empties = document.querySelectorAll('.empty');
+// let selectedCard = "";
 
 
 
-//pass in selected card through the dragStart function
-function dragStart() {
-    this.className += ' hold';
-    selectedCard = objectId(this);
-    setTimeout(() => (this.className = 'invisible'), 0);
-    console.log('start');
-}
+// //pass in selected card through the dragStart function
+// function dragStart() {
+//     this.className += ' hold';
+//     selectedCard = objectId(this);
+//     setTimeout(() => (this.className = 'invisible'), 0);
+//     console.log('start');
+// }
 
-function dragEnd() {
-    this.className = 'contentCard fill';
-    objectId(this)= selectedCard;
-    console.log('end');
-}
+// function dragEnd() {
+//     this.className = 'contentCard fill';
+//     objectId(this)= selectedCard;
+//     console.log('end');
+// }
 
-for (const empty of empties){
-    empty.addEventListener('dragover', dragOver);
-    empty.addEventListener('dragenter', dragEnter);
-    empty.addEventListener('dragleave', dragLeave);
-    empty.addEventListener('drop', dragDrop);
-}
+// for (const empty of empties){
+//     empty.addEventListener('dragover', dragOver);
+//     empty.addEventListener('dragenter', dragEnter);
+//     empty.addEventListener('dragleave', dragLeave);
+//     empty.addEventListener('drop', dragDrop);
+// }
 
-fill.addEventListener('dragstart', dragStart);
-fill.addEventListener('dragend', dragEnd);
-fill2.addEventListener('dragstart', dragStart);
-fill2.addEventListener('dragend', dragEnd);
-fill3.addEventListener('dragstart', dragStart);
-fill3.addEventListener('dragend', dragEnd);
+// fill.addEventListener('dragstart', dragStart);
+// fill.addEventListener('dragend', dragEnd);
+// fill2.addEventListener('dragstart', dragStart);
+// fill2.addEventListener('dragend', dragEnd);
+// fill3.addEventListener('dragstart', dragStart);
+// fill3.addEventListener('dragend', dragEnd);
 
-function dragOver(e) {
-    e.preventDefault();
-    console.log('over');
-}
+// function dragOver(e) {
+//     e.preventDefault();
+//     console.log('over');
+// }
 
-function dragEnter(e) {
-    e.preventDefault();
-    this.className += ' hovered'
-    console.log('enter');
-}
+// function dragEnter(e) {
+//     e.preventDefault();
+//     this.className += ' hovered'
+//     console.log('enter');
+// }
 
-function dragLeave() {
-    this.className = 'empty'
-    console.log('leave');
-}
+// function dragLeave() {
+//     this.className = 'empty'
+//     console.log('leave');
+// }
 
-function dragDrop(e) {
-    this.className = 'dropZone empty';
-    this.append(fill);
-    console.log('drop');
-}
+// function dragDrop(e) {
+//     this.className = 'dropZone empty';
+//     this.append(fill);
+//     console.log('drop');
+// }
             
-const list_items = document.querySelectorAll
+const list_items = document.querySelectorAll('.list-item');
+const lists = document.querySelectorAll('.list');
 
+let draggedItem = null;
+
+for(let i = 0; i < list_items.length; i++){
+    const item = list_items[i]
+    
+    item.addEventListener('dragstart', function() {
+        draggedItem = item;
+        setTimeout(function () {
+            item.style.display = 'none';
+        }, 0)
+        });
+
+    item.addEventListener('dragend', function() {
+        setTimeout(function() {
+            draggedItem = draggedItem.style.display = 'block';
+            draggedItem = null;
+        }, 0);
+        })
+        
+        for(let j = 0; j < lists.length; j++) {
+            const list = lists[j];
+
+            list.addEventListener('dragover', function(e) {
+                e.preventDefault();
+            });
+            list.addEventListener('dragenter', function(e) {
+                e.preventDefault();
+            });
+
+            list.addEventListener('drop', function(e) {
+                this.append(draggedItem);
+            });
+        }
+    }
+        
 
