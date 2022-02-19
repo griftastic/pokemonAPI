@@ -18,7 +18,7 @@ body {
    text-align: center;
    padding-right: 2em;
    padding-left: 2em;
-   margin-bottom: 2em;
+   margin-bottom: 0em;
 }
 
 .p1 {
@@ -187,4 +187,16 @@ img {
 
  iframe{
     display:none;
+ }
+
+ .music{
+    width:100vw;
+    display: flex;
+    justify-content: center;
+ }
+ 
+ audio{
+    opacity: .4;
+    margin-top: -1em;
+    height: 2em;
  }
