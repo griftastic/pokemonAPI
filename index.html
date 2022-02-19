@@ -11,43 +11,77 @@
     <title>Pokemon</title>
 </head>
 <body>
-
-    <div class= "appContainer">
-        <div class = "cardContainer lists">
-
-        <div class= "fillSpace">   
-                <section draggable = "true" class = "cardOne list-item contentCard fill">
-                    <h1 class= "content pokemonName1"></h1>
-                    <h2></h2>
-                    <img draggable = "false" class = "content image1"><img>
-                </section>
-        </div>
-
-        <div class= "fillSpace">
-                <section draggable = "true" class= "cardTwo list-item contentCard fill">
-                    <h1 class= "content pokemonName2"></h1>
-                    <h2></h2>
-                    <img draggable = "false" class = "content image2"><img>
-                </section>
-        </div>
+    
+    <main class="mainContainer">
+        
+        <div class="daddyLeftContainer">
+            <div class="leftContainer">
+                <h1>Pokemon</h1>
+                <h2>Kiss, Marry, Kill</h2>
+                <h3>Rules:</h3>
+                <div class="para">
+                    <p class= "p1">This is the game of Pokemon: Kiss, Marry, Kill. Click and drag each Pokemon and sort them into 3 categories:</p>
+                    <p><strong class="Bold">Kiss:</strong> You're okay having one kiss with this Pokemon. You could see yourself going on a nice date date with them, but nothing more than that.</p>
+                    <p><strong class= "Bold"> Marry:</strong> You could spend the rest of your life with this Pokemon. You could buy a house, have three beautiful children with them, and retire to a condo in Florida with them.</p>
+                    <p><strong class= "Bold">Kill:</strong> You could kill this Pokemon in cold blood. No second thoughts at all.</p>
+                </div>
+                    <div class="button">
+                        <button onclick= "reset()" class="reset button">Randomize</button>
+                    </div>
+                </div>
+            </div>
+        
+        <div class= "appContainer">
+            <div class = "cardContainer lists">
+                
+                <div class= "fillSpace list">   
+                    <section draggable = "true" class = "cardOne list-item contentCard fill">
+                        <h1 class= "content pokemonName1"></h1>
+                        <img draggable = "false" class = "content image1"><img>
+                    </section>
+                </div>
+                
+                <div class= "fillSpace list">
+                    <section draggable = "true" class= "cardTwo list-item contentCard fill">
+                        <h1 class= "content pokemonName2"></h1>
+                        <img draggable = "false" class = "content image2"><img>
+                    </section>
+                </div>
+                
+                <div class= 'fillSpace list'> 
+                    <section draggable = "true" class = "cardThree contentCard list-item fill">
+                        <h1 class= "content pokemonName3"></h1>
+                        <img draggable = "false" class = "content image3"><img>
+                    </section>
+                </div>
+            </div>
             
-        <div class= 'fillSpace'> 
-                <section draggable = "true" class = "cardThree contentCard list-item fill">
-                    <h1 class= "content pokemonName3"></h1>
-                    <h2></h2>
-                    <img draggable = "false" class = "content image3"><img>
-                </section>
-        </div>
+            <div class = "dropContainer">
+                <div class= "dropZone empty list" id="listKiss"></div>
+                <div class= "dropZone empty list" id="listMarry"></div>
+                <div class= "dropZone empty list" id="listKill"></div>
+            </div>
+            
+            <div class="choicesContainer">
+                <h3 class="kissText">Kiss</h3>
+                <h3 class="marryText">Marry</h3>
+                <h3 class="killText">Kill</h3>
+            </div>
+            
         </div>
         
-        <div class = "dropContainer">
-            <div class= "dropZone empty list"></div>
-            <div class= "dropZone empty list"></div>
-            <div class= "dropZone empty list"></div>
+    </main>
+
+    <!-- <div class="popup" id="popup">
+        <div class="overlay">
+            <div class="popContent">
+                <div class="close">&times;</div>
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quam repudiandae. Necessitatibus provident voluptatibus aspernatur at vel modi nobis, quam a nihil earum, velit architecto! Voluptatem illum mollitia quo nam.</p>
+            </div>
         </div>
-    </div>
-        
+    </div> -->
         
         <script src="./fetch.js"></script>
-</body>
-</html>
+    </body>
+    </html>

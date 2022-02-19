@@ -3,17 +3,26 @@
 const baseURL = "https://pokeapi.co";
 
 
+
 //RNG
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+function reset(){
+    location.reload();
+}
+
+// function togglePopup(){
+//     document.getElementById("popup").classList.toggle("active");
+// }
+
 //API Fetch / Appending Cards
 
 function fetchPokemon() {
     for(let x = 1; x<=3; x++){
-        let random = getRandomInt(898);
+        let random = getRandomInt(897) +1;
         fetch(`${baseURL}/api/v2/pokemon/${random}/`).then(response => {
             return response.json();
         })
