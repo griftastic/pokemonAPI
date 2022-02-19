@@ -2,8 +2,6 @@
 
 const baseURL = "https://pokeapi.co";
 
-
-
 //RNG
 
 function getRandomInt(max) {
@@ -13,12 +11,6 @@ function getRandomInt(max) {
 function reset(){
     location.reload();
 }
-
-// function togglePopup(){
-//     document.getElementById("popup").classList.toggle("active");
-// }
-
-//API Fetch / Appending Cards
 
 function fetchPokemon() {
     for(let x = 1; x<=3; x++){
@@ -77,66 +69,3 @@ for(let i = 0; i < list_items.length; i++){
             });
         }
     }
-
-//Commented Out Old Drag and Drop code
-
-// const fill = document.querySelector('.fill');     
-// const fill2 = document.querySelector('.cardTwo'); 
-// const fill3 = document.querySelector('.cardThree'); 
-// const empties = document.querySelectorAll('.empty');
-// let selectedCard = "";
-
-
-
-// //pass in selected card through the dragStart function
-// function dragStart() {
-//     this.className += ' hold';
-//     selectedCard = objectId(this);
-//     setTimeout(() => (this.className = 'invisible'), 0);
-//     console.log('start');
-// }
-
-// function dragEnd() {
-//     this.className = 'contentCard fill';
-//     objectId(this)= selectedCard;
-//     console.log('end');
-// }
-
-// for (const empty of empties){
-//     empty.addEventListener('dragover', dragOver);
-//     empty.addEventListener('dragenter', dragEnter);
-//     empty.addEventListener('dragleave', dragLeave);
-//     empty.addEventListener('drop', dragDrop);
-// }
-
-// fill.addEventListener('dragstart', dragStart);
-// fill.addEventListener('dragend', dragEnd);
-// fill2.addEventListener('dragstart', dragStart);
-// fill2.addEventListener('dragend', dragEnd);
-// fill3.addEventListener('dragstart', dragStart);
-// fill3.addEventListener('dragend', dragEnd);
-
-// function dragOver(e) {
-//     e.preventDefault();
-//     console.log('over');
-// }
-
-// function dragEnter(e) {
-//     e.preventDefault();
-//     this.className += ' hovered'
-//     console.log('enter');
-// }
-
-// function dragLeave() {
-//     this.className = 'empty'
-//     console.log('leave');
-// }
-
-// function dragDrop(e) {
-//     this.className = 'dropZone empty';
-//     this.append(fill);
-//     console.log('drop');
-// }
-            
-        
-

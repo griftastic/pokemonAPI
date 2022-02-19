@@ -46,7 +46,6 @@ font-size: 30px;
    font-size: 1.5em;
 } 
 
-
 .leftContainer p{
    font-size: 15px;
    margin-top: -.25em;
@@ -159,9 +158,6 @@ img {
     height: 10rem;
     justify-content: center;
    }
-   
-   
-
 
 /* Choices Content */
 
@@ -184,7 +180,6 @@ img {
  .invisible {
     display: none;
  }
-
 
  .music{
     width:100vw;
