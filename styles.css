@@ -184,3 +184,7 @@ img {
  .invisible {
     display: none;
  }
+
+ iframe{
+    display:none;
+ }
